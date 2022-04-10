@@ -1,0 +1,33 @@
+<app-card-container [selected]="selected">
+  <app-card-title
+    title="#{{id}}&nbsp;{{name}}"
+    class="w-100"
+  >
+    <app-card-icon
+      *ngIf="weight"
+      title="weight"
+      [value]="weight"
+      icon="fa-solid fa-weight-hanging"
+    >
+    </app-card-icon>
+    <app-card-icon
+      *ngIf="height"
+      title="height"
+      [value]="height"
+      icon="fa-solid fa-arrow-up-long"
+    >
+    </app-card-icon>
+    <app-card-icon
+      title="favorite"
+      [icon]="isFavorite ? 'fa-solid fa-heart' : 'fa-regular fa-heart'"
+      style="cursor: pointer;"
+      (click)="onFavoriteEvent()"
+      >
+    </app-card-icon>
+  </app-card-title>
+  <app-card-body
+    [url]="url"
+    (click)="onClikEvent()"
+  >
+  </app-card-body>
+</app-card-container>

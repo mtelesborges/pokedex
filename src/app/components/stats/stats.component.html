@@ -1,0 +1,9 @@
+<strong>{{ name }}</strong>
+<progressbar
+  [max]="100"
+  [value]="value ?? 0"
+  [striped]="true"
+  [type]="type"
+>
+  <span class="text-nowrap">{{ value }}</span>
+</progressbar>

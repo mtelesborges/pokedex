@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center align-items-center h-100">
+  <div class="col-md-6 px-sm-3">
+    <div class="d-flex col-12">
+      <app-card
+        class="col-md-4"
+        [name]="pokemon?.name"
+        [id]="pokemon?.id"
+        [url]="getUrl(pokemon)"
+        [weight]="pokemon?.weight"
+        [height]="pokemon?.height"
+        [isFavorite]="favoriteService.isFavorite(pokemon?.id)"
+        (favoritEvent)="favoriteService.onFavorite(pokemon?.id)"
+      >
+      </app-card>
+      <ul class="col-6 ms-sm-3 d-flex flex-column justify-content-end">
+        <li class="mt-2" *ngFor="let item of pokemon?.stats">
+          <app-stats
+            [name]="item?.stat?.name"
+            [value]="item?.base_stat"
+          >
+          </app-stats>
+        </li>
+      </ul>
+
+    </div>
+    <hr>
+    <h4 style="font-size: 16px;">Evolutions</h4>
+    <div>
+      <ul
+        class="d-flex align-items-center justify-content-center col-md-10 mt-xs-5 mt-sm-3"
+        *ngIf="evolutions?.length"
+      >
+        <li *ngFor="let item of evolutions" class="col-3 me-xl-3" [ngClass]="{'col-4': pokemon?.id === item?.id}">
+          <app-card
+            class="col-md-4"
+            [name]="item?.name"
+            [id]="item?.id"
+            [url]="getUrl(item)"
+            [selected]="pokemon?.id === item?.id"
+            [isFavorite]="favoriteService.isFavorite(item.id)"
+            (clickEvent)="onNavigate(item)"
+            (favoritEvent)="favoriteService.onFavorite(item.id)"
+            >
+          </app-card>
+        </li>
+      </ul>
+      <div>
+        <app-empty *ngIf="!evolutions?.length"></app-empty>
+      </div>
+    </div>
+  </div>
+</div>

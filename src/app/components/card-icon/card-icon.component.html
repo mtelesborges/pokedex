@@ -1,0 +1,4 @@
+<div class="ms-2 d-flex flex-column align-items-center">
+  <span class="d-block" [tooltip]="title" placement="left"><i [ngClass]="icon ?? ''"></i></span>
+  <span *ngIf="value">{{ value }}</span>
+</div>

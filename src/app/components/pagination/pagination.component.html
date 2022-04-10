@@ -1,0 +1,14 @@
+<div *ngIf="totalItems">
+  <span>{{ ((+currentPage - 1) * itemsPerPage) + 1 }} - {{ +currentPage * itemsPerPage }} | {{ totalItems }}</span>
+  <pagination
+    [boundaryLinks]="true"
+    [totalItems]="totalItems"
+    [maxSize]="maxSize"
+    (pageChanged)="onPageChanged($event)"
+    previousText="&lsaquo;"
+    nextText="&rsaquo;"
+    firstText="&laquo;"
+    lastText="&raquo;"
+  >
+  </pagination>
+</div>

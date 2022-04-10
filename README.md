@@ -1,27 +1,37 @@
-# Pokemon
+# Pokedex
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
+Este projeto tem por objetivo apresentar conceitos de desenvolvimento utilizando o framework angular
+Para a construção desta aplicação foram considerados pontos como:
+* Clean code
+* Atomic Design
+* ESlint
+* Testes unitários
 
-## Development server
+![](/src/assets/images/screenshot.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<!-- ![Screenshot 1](/src/assets/images/screenshot1.png "schreenshot") -->
+<!-- ![Screenshot 2](/src/assets/images/screenshot2.png "schreenshot") -->
+<!-- ![Screenshot 3](/src/assets/images/screenshot3.png "schreenshot") -->
+<!-- ![Screenshot 4](/src/assets/images/screenshot4.png "schreenshot") -->
 
-## Code scaffolding
+## Executando o projeto
+* Clonando o repositório
+``` bash
+  git clone https://github.com/mtelesborges/pokedex.git
+```
+* Uma vez que tenha clonado o repositório, instale as dependências:
+``` bash
+  npm run install
+```
+* Por fim, execute o comando abaixo:
+``` bash
+  npm run start
+```
+* Agora, é possível abrir em sue browser a aplicação no endereço:
+**http://localhost:4200**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Roadmap
+1. Utilização do **cypress** para testes e2e
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Referências
+[Pokeapi](https://pokeapi.co/)

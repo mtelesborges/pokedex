@@ -1,0 +1,8 @@
+<div style="cursor: pointer;">
+  <img *ngIf="loading" src="./../../../assets/images/loading-buffering.gif" />
+  <img
+    [hidden]="loading"
+    [src]="url"
+    (load)="loading = false;"
+  />
+</div>

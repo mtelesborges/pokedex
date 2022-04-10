@@ -1,0 +1,17 @@
+<ul class="d-flex justify-content-between flex-wrap" *ngIf="pokemons?.length">
+  <li
+    *ngFor="let item of pokemons"
+    class="col-xl-2 col-sm-3 mx-sm-1 mx-xs-3 mt-3"
+  >
+    <app-card
+      [name]="item?.name"
+      [id]="item?.id"
+      [url]="item.sprites.other['official-artwork'].front_default"
+      (clickEvent)="onNavigate(item)"
+      [isFavorite]="favoriteService.isFavorite(item?.id)"
+      (favoritEvent)="favoriteService.onFavorite(item?.id)"
+    >
+    </app-card>
+  </li>
+</ul>
+<app-empty *ngIf="!pokemons?.length" class="my-5 d-block text-muted" style="font-size: 3rem;"></app-empty>

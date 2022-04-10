@@ -1,0 +1,5 @@
+<app-spinner *ngIf="pokemonsLoading"></app-spinner>
+<app-pokedex-container>
+  <app-pokedex-header [totalItems]="totalItems"></app-pokedex-header>
+  <app-pokedex-body [pokemons]="pokemons"></app-pokedex-body>
+</app-pokedex-container>
