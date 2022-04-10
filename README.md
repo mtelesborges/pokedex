@@ -1,7 +1,6 @@
 # Pokedex
 
-Este projeto tem por objetivo apresentar conceitos de desenvolvimento utilizando o framework angular
-Para a construção desta aplicação foram considerados pontos como:
+Este projeto tem por objetivo apresentar amostras das melhores práticas na construção de aplicações utilizando Angular, tais como:
 * Clean code
 * Atomic Design
 * ESlint
