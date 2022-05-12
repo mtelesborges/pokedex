@@ -30,7 +30,7 @@
         class="d-flex align-items-center justify-content-center col-md-10 mt-xs-5 mt-sm-3"
         *ngIf="evolutions?.length"
       >
-        <li *ngFor="let item of evolutions" class="col-3 me-xl-3" [ngClass]="{'col-4': pokemon?.id === item?.id}">
+        <li *ngFor="let item of evolutions" class="col-3 me-xs-3" [ngClass]="{'col-4': pokemon?.id === item?.id}">
           <app-card
             class="col-md-4"
             [name]="item?.name"

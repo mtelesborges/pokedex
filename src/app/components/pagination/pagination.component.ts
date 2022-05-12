@@ -19,5 +19,6 @@ export class PaginationComponent{
   onPageChanged(ev: PageChangedEvent){
     // const event = (ev as unknown) as PageChangedEvent;
     this.pageChanged.emit(ev);
+    this.currentPage = ev.page;
   }
 }
